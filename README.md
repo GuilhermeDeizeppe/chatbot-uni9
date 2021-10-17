@@ -7,7 +7,7 @@ Este projeto está sendo desenvolvido na versão 3.7.6 da linguagem Python.
 
 Através da biblioteca Rasa, estamos criando um chatbot que seja capaz de consultar a previsão do tempo e retornar as informações para o usuário.
 
-Utilizamos a biblioteca spaCy para reconhecimento de entidade LOC (local).
+Utilizamos a biblioteca spaCy para reconhecimento da entidade LOC (local).
 
 
 Para entender melhor o funcionamento do Rasa, recomendo a documentação oficial: https://rasa.com/docs/rasa/
@@ -22,12 +22,12 @@ Toda vez que for feito alterações nos arquivos que o bot utiliza para se comun
 Para abrir o ambiente interativo, onde você poderá treinar o bot, utilize o comando "rasa interactive".
 
 
-OBS.: para usar o ambiente interativo, é necessário rodar primeiro o servidor de actions, que é o responsável por rodar todas as ações customizadas do bot, como a chamada para a API da openweathermap, por exemplo.
+OBS.: para usar o ambiente interativo, é necessário rodar primeiro o servidor de actions através do comando "rasa run actions".
 
 
 # nlu.yml
 
-O documento nlu.yml é onde ficam todas as intents criadas para o bot.
+O documento nlu.yml serve para aarmazenar todas as intents criadas para o bot.
 
 Para entender melhor o que são intents, verificar documentação Rasa.
 

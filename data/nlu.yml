@@ -1,0 +1,154 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - olá
+    - oi
+    - eae
+    - bom dia
+    - boa noite
+    - e aí
+    - ei
+    - ou
+    - salve
+    - boa tarde
+    - tudo bem?
+    - oie
+    - quanto tempo
+    - eae sumido
+    - e aí sumido
+    - Boa noite
+    - Oie
+    - Olá
+    - Ooie
+    - Olá, bom dia!
+    - noite boa
+    - Boa noute
+    - Olá, boa noite
+    - Salve, blz?
+    - boa tarde, tudo bem?
+- intent: goodbye
+  examples: |
+    - tchau
+    - era só isso mesmo, obrigado
+    - bye
+    - tchau tchau
+    - falou
+    - flw
+    - tchauzinho
+    - tenha um bom dia
+    - até mais
+    - bye bye
+    - até logo
+    - Não, obrigado. Era só isso mesmo, tchau!
+    - Não, era só isso mesmo. Obrigado!
+    - Não, era só isso mesmo. Obrigado!!
+    - Tchau
+    - Valeu
+    - obrigado
+- intent: inform_weather
+  examples: |
+    - previsão do tempo em [Osasco](LOC)
+    - previsão do tempo em [São Paulo](LOC)
+    - previsão de chuva em [Barueri](LOC)?
+    - sol em [Maceió](LOC)?
+    - chuva
+    - calor
+    - eu gostaria de saber se tem previsão de neve em [Toronto](LOC)
+    - tempestade na [Praia Grande](LOC)
+    - temperatura para segunda-feira em [São Paulo](LOC)
+    - quantos graus
+    - quantos graus faz em [Osasco](LOC)?
+    - chance de chuva em [Barcelona](LOC)
+    - está chovendo
+    - está fazendo sol
+    - está sol
+    - está sol em [Juquitiba](LOC)?
+    - está calor em [Santos](LOC)?
+    - está frio
+    - vai fazer frio
+    - previsão de calor
+    - tempo
+    - tempo firme
+    - Gostaria de saber a previsão do tempo
+    - [Osasco](LOC)
+    - Gostaria de saber a previsão para a cidade de [Foz do Iguaçu](LOC)
+    - Poderia me informar a previsão do tempo?
+    - Para a cidade de [São Sebastião](LOC), por favor
+    - Poderia verificar a previsão do tempo [Toronto](LOC), por gentileza?
+    - Pega pra mim a previsão do tempo em [Los Angeles](LOC) fazendo favor
+    - Providencia pra mim a previsão em [Peruíbe](LOC), por favor.
+    - [São José dos Campos](LOC)
+    - está chovendo?
+    - Estou falando sobre a cidade de [Cairo](LOC)
+    - neve no [Rio de Janeiro](LOC)?
+    - tem chances de chover em [Natal](LOC)?
+    - está nevando em [Manaus](LOC) neste momento?
+    - Eu gostaria de saber a previsão do tempo
+    - Previsão do tempo
+    - Previsão do tempo para [Taboão da Serra](LOC)
+    - Previsão do tempo em [Santos](LOC)
+    - Gostaria de saber a previsão do tempo para [Osasco](LOC)
+    - Poderia verificar a previsão do tempo para [Osasco](LOC)?
+    - previsão do tempo [osasco](LOC)
+    - previsão do tempo para [praia grande](LOC)
+    - Poderia checar a previsão do tempo, por favor?
+    - Para a cidade de [Águas de Lindóia](LOC), por favor
+    - Poderia providenciar a previsão do clima para [Manaus](LOC)?
+    - Sim, eu também gostaria de saber a previsão para [Las Vegas](LOC)
+    - Em [Petrópolis](LOC) está sol?
+    - Calor em [Essex](LOC)?
+    - Previsão do tempo para Ubatuba
+    - Preciso da previsão do tempo
+    - Itatiba
+    - Previsão do tempo em Salesópolis
+- intent: out_of_scope
+  examples: |
+    - Eu gostaria de uma bicicleta
+    - Vender doces
+    - O que você acha de mim?
+    - Por que o sol é amarelo?
+    - Por que você é assim?
+    - Qual o meu nome?
+    - Qual a sua cor favorita?
+    - Que horas são?
+    - Eu gostaria de ser rico
+    - Eu quero ser milionário
+    - Quero dormir
+    - Estou cansado
+    - aaaaa
+    - kkkkkkkkkk
+    - jasiasdoahdo
+    - hashuahsuah
+    - o que você quer
+    - Eu gostaria de uma bike
+    - quando que o mundo vai acabar?
+- intent: are_you_a_bot
+  examples: |
+    - Cê é um robô?
+    - você é um bot?
+    - estou falando com quem?
+    - estou falando com um humano?
+    - você é real?
+    - você é um chatbot?
+    - cê é uma máquina?
+    - Você é um robô?
+    - você é um robo
+- intent: how_are_you
+  examples: |
+    - tudo bem?
+    - como vão as coisas?
+    - tudo certo?
+    - como você está?
+    - tranquilo?
+    - de boa?
+- intent: what_can_you_do
+  examples: |
+    - o que você sabe fazer?
+    - o que você pode fazer?
+    - o que você faz?
+    - você sabe fazer o quê?
+    - como você pode me ajudar?
+    - O que você sabe fazer?
+    - o que voce pode fazer

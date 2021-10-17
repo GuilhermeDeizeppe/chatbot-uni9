@@ -1,0 +1,217 @@
+
+version: "2.0"
+stories:
+
+- story: interactive_story_2
+  steps:
+  - intent: inform_weather
+    entities:
+    - LOC: praia grande
+  - slot_was_set:
+    - LOC: praia grande
+  - action: simple_weather_form
+  - active_loop: simple_weather_form
+  - slot_was_set:
+    - LOC: praia grande
+  - slot_was_set:
+    - LOC: praia grande
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_get_weather
+  - slot_was_set:
+    - LOC: praia grande
+  - action: utter_anything_else
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: inform_weather
+  - action: simple_weather_form
+  - active_loop: simple_weather_form
+  - slot_was_set:
+    - requested_slot: LOC
+  - slot_was_set:
+    - LOC: Águas de Lindóia
+  - slot_was_set:
+    - LOC: Águas de Lindóia
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_get_weather
+  - slot_was_set:
+    - LOC: Águas de Lindóia
+  - action: utter_anything_else
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: inform_weather
+    entities:
+    - LOC: Manaus
+  - slot_was_set:
+    - LOC: Manaus
+  - action: simple_weather_form
+  - active_loop: simple_weather_form
+  - slot_was_set:
+    - LOC: Manaus
+  - slot_was_set:
+    - LOC: Manaus
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_get_weather
+  - slot_was_set:
+    - LOC: Manaus
+  - action: utter_anything_else
+  - intent: inform_weather
+    entities:
+    - LOC: Las Vegas
+  - slot_was_set:
+    - LOC: Las Vegas
+  - action: simple_weather_form
+  - active_loop: simple_weather_form
+  - slot_was_set:
+    - LOC: Las Vegas
+  - slot_was_set:
+    - LOC: Las Vegas
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_get_weather
+  - slot_was_set:
+    - LOC: Las Vegas
+  - action: utter_anything_else
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_4
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: inform_weather
+    entities:
+    - LOC: Petrópolis
+  - slot_was_set:
+    - LOC: Petrópolis
+  - action: simple_weather_form
+  - active_loop: simple_weather_form
+  - slot_was_set:
+    - LOC: Petrópolis
+  - slot_was_set:
+    - LOC: Petrópolis
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_get_weather
+  - slot_was_set:
+    - LOC: Petrópolis
+  - action: utter_anything_else
+  - intent: inform_weather
+  - action: simple_weather_form
+  - active_loop: simple_weather_form
+  - slot_was_set:
+    - LOC: Petrópolis
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_get_weather
+  - slot_was_set:
+    - LOC: Petrópolis
+  - action: utter_anything_else
+
+- story: interactive_story_5
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: inform_weather
+    entities:
+    - LOC: Ubatuba
+  - slot_was_set:
+    - LOC: Ubatuba
+  - action: simple_weather_form
+  - active_loop: simple_weather_form
+  - slot_was_set:
+    - LOC: Ubatuba
+  - slot_was_set:
+    - LOC: Ubatuba
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_get_weather
+  - slot_was_set:
+    - LOC: Ubatuba
+  - action: utter_anything_else
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_6
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: what_can_you_do
+  - action: utter_what_can_i_do
+  - action: utter_can_i_help
+  - intent: inform_weather
+  - action: simple_weather_form
+  - active_loop: simple_weather_form
+  - slot_was_set:
+    - requested_slot: LOC
+  - slot_was_set:
+    - LOC: Itatiba
+  - slot_was_set:
+    - LOC: Itatiba
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_get_weather
+  - slot_was_set:
+    - LOC: Itatiba
+  - action: utter_anything_else
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_7
+  steps:
+  - intent: are_you_a_bot
+  - action: utter_i_am_a_bot
+  - action: utter_can_i_help
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_8
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: are_you_a_bot
+  - action: utter_i_am_a_bot
+  - action: utter_can_i_help
+  - intent: what_can_you_do
+  - action: utter_what_can_i_do
+  - action: utter_can_i_help
+  - intent: inform_weather
+    entities:
+    - LOC: Salesópolis
+  - slot_was_set:
+    - LOC: Salesópolis
+  - action: simple_weather_form
+  - active_loop: simple_weather_form
+  - slot_was_set:
+    - LOC: Salesópolis
+  - slot_was_set:
+    - LOC: Salesópolis
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_get_weather
+  - slot_was_set:
+    - LOC: Salesópolis
+  - action: utter_anything_else
+  - intent: goodbye
+  - action: utter_goodbye

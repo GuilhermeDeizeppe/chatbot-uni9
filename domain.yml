@@ -1,0 +1,76 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- are_you_a_bot
+- greet
+- inform_weather
+- what_can_you_do
+- goodbye
+- inform_city
+- out_of_scope
+- how_are_you
+entities:
+- LOC
+- out_of_scope_request
+slots:
+  LOC:
+    type: text
+    influence_conversation: true
+  date:
+    type: any
+    influence_conversation: false
+responses:
+  utter_greet:
+  - text: Olá! Como posso ajudar?
+  - text: Oi! Em que posso ajudar?
+  - text: Oie! Como posso te ajudar?
+  - text: Oii! Em que posso te ajudar?
+  utter_goodbye:
+  - text: Tchau
+  - text: Até mais!
+  utter_fallback:
+  - text: Lamento, mas não compreendi.
+  - text: Desculpe, mas não compreendi.
+  - text: Não consegui compreender, desculpe.
+  - text: Hmm, não entendi.
+  - text: Não entendi, desculpe.
+  - text: Perdão, mas ainda não tenho uma resposta para isso.
+  utter_wait:
+  - text: Vou verificar, só um minuto.
+  utter_ask_LOC:
+  - text: Qual cidade?
+  - text: Beleza, em qual cidade?
+  - text: Para qual cidade?
+  - text: Você quer saber a previsão para qual cidade?
+  utter_anything_else:
+  - text: Ajudo em algo mais?
+  utter_i_am_a_bot:
+  - text: Sou um robô! :)
+  - text: Sou um chatbot :)
+  utter_i_am_fine:
+  - text: Estou bem, obrigado! Como posso ajudar?
+  utter_what_can_i_do:
+  - text: Sou capaz de verificar a previsão do tempo atual em qualquer lugar do mundo! Para isso, basta dizer "Previsão do tempo em..." e em seguida colocar o nome da cidade.
+  utter_can_i_help:
+  - text: Como posso te ajudar?
+  - text: Em que posso ajudar?
+actions:
+- action_get_weather
+- utter_anything_else
+- utter_ask_LOC
+- utter_can_i_help
+- utter_fallback
+- utter_goodbye
+- utter_greet
+- utter_i_am_a_bot
+- utter_i_am_fine
+- utter_wait
+- utter_what_can_i_do
+forms:
+  simple_weather_form:
+    required_slots:
+      LOC:
+      - type: from_entity
+        entity: LOC

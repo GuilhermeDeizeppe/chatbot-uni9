@@ -16,7 +16,7 @@ class ActionGetWeather(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         url = 'http://api.openweathermap.org/data/2.5/weather'
-        app_id = ''
+        app_id = ''  # aqui você deve incluir sua própria chave de API
         units = 'metric'
         lang = 'pt_br'
         city = tracker.get_slot('LOC')

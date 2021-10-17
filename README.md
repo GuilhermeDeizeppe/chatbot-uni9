@@ -11,6 +11,7 @@ Utilizamos a biblioteca spaCy para reconhecimento de entidade LOC (local).
 
 
 Para entender melhor o funcionamento do Rasa, recomendo a documentação oficial: https://rasa.com/docs/rasa/
+
 Para pegar os conceitos básicos do Rasa na prática: https://www.youtube.com/playlist?list=PL75e0qA87dlEjGAc9j9v3a5h1mxI2Z9fi
 
 

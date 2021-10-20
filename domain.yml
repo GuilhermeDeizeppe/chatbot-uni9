@@ -3,13 +3,13 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- are_you_a_bot
 - greet
 - inform_weather
 - what_can_you_do
+- are_you_a_bot
+- out_of_scope
 - goodbye
 - inform_city
-- out_of_scope
 - how_are_you
 entities:
 - LOC

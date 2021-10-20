@@ -215,3 +215,36 @@ stories:
   - action: utter_anything_else
   - intent: goodbye
   - action: utter_goodbye
+
+- story: interactive_story_9
+  steps:
+  - intent: out_of_scope
+  - action: utter_fallback
+
+- story: interactive_story_10
+  steps:
+  - intent: are_you_a_bot
+  - action: utter_i_am_a_bot
+  - action: utter_can_i_help
+
+- story: interactive_story_11
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: what_can_you_do
+  - action: utter_what_can_i_do
+  - action: utter_can_i_help
+  - intent: inform_weather
+  - action: simple_weather_form
+  - active_loop: simple_weather_form
+  - slot_was_set:
+    - requested_slot: LOC
+  - slot_was_set:
+    - LOC: Tangará da Serra
+  - slot_was_set:
+    - LOC: Tangará da Serra
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_get_weather
+  - action: utter_anything_else

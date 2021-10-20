@@ -28,6 +28,15 @@ nlu:
     - Olá, boa noite
     - Salve, blz?
     - boa tarde, tudo bem?
+    - Opa, eae
+    - Opa, e aí?
+    - Opa, eae?
+    - Opa!
+    - Saudações
+    - Oi
+    - Tenha um bom dia
+    - Boa tarde
+    - Tenha uma boa noite
 - intent: goodbye
   examples: |
     - tchau
@@ -47,6 +56,16 @@ nlu:
     - Tchau
     - Valeu
     - obrigado
+    - Não preciso de mais nada
+    - Agradeço,
+    - Até mais
+    - Até mais tarde
+    - Te vejo mais tarde
+    - Até
+    - Boa noite
+    - É só isso por agora, até
+    - É só isso,
+    - Até um outro dia
 - intent: inform_weather
   examples: |
     - previsão do tempo em [Osasco](LOC)
@@ -103,6 +122,138 @@ nlu:
     - Preciso da previsão do tempo
     - Itatiba
     - Previsão do tempo em Salesópolis
+    - Quanto ta lá em [Ribeirão Preto](LOC)?
+    - Vai tá quantos graus em[São Bernardo do Campo](LOC)?
+    - Vai fazer muito frio em[Biritiba Mirim](LOC)?
+    - Vai tá quente hoje em [São Caetano do Sul](LOC)?
+    - Poderia me falar a temperatura lá em [Ribeirão Preto](LOC)?
+    - Vai fazer muito calor em[Franco da Rocha](LOC)?
+    - Qual a temperatura de hoje em [Rio Grande do Norte](LOC)?
+    - Vai chover muito em [Minas Gerais](LOC)?
+    - Está nevando na [Bahia](LOC)?
+    - Vai chover muito em [Caraguá](LOC)?
+    - Tá muito quente em [Barra Funda](LOC)?
+    - Vai nevar em [Itaquaquecetuba](LOC)?
+    - Vai ter chuva fraca em [Mogi das Cruzes](LOC)?
+    - Está chovendo em [Suzano](LOC)?
+    - Como tá a temperatura
+    - Como está o clima em
+    - Vai estar nublado em [Nova York](LOC)?
+    - O céu vai estar limpo
+    - o céu está limpo em [Bragança Paulista](LOC)?
+    - Como vai estar o clima pra [Belo Horizonte](LOC)?
+    - Alguma previsão de nevasca em[Espírito Santo](LOC)?
+    - Neve
+    - nevar
+    - Nevasca
+    - Clima
+    - clima
+    - muito frio
+    - muito calor
+    - frio
+    - Como tá o clima em [Mato Grosso](LOC)?
+    - tá chovendo
+    - Como tá o clima no
+    - Como tá o clima na
+    - Previsão do tempo em [São Luís](LOC)
+    - Previsão do tempo em [Ponta Grossa](LOC)
+    - Previsão em [Porto Alegre](LOC)
+    - Previsão do tempo em [Londrina](LOC)
+    - Tempo em [Campo Grande](LOC)
+    - Temperatura em [Rio Branco](LOC)
+    - Temperatura em [São Francisco do Guaporé](LOC)
+    - Chuva na cidade de [Ariquemes](LOC)
+    - Chance de temporal em [São João](LOC)
+    - Calor em [Cuiabá](LOC)
+    - Geada em [Campo Novo do Parecis](LOC)
+    - Na cidade de [Tangará da Serra](LOC) tem chances de chover
+    - Pega a previsão para [Barra do Garças](LOC)
+    - Em [Alta Floresta](LOC) está chovendo?
+    - Vai fazer sol em [Guarantã do Norte](LOC)
+    - Na cidade de [Natal](LOC) está fazendo quantos graus?
+    - Em [João Pessoa](LOC) está sol?
+    - Previsão do tempo para [Aracaju](LOC)
+    - Temperatura em [Feira de Santana](LOC)
+    - Chuva em [Jacobina](LOC)
+    - Calor em [Irecê](LOC)
+    - Frio em [Vitória](LOC)
+    - Frio em [Betim](LOC)
+    - Frio na cidade de [Araçatuba](LOC)
+    - Está nevando em [Chapecó](LOC)
+    - Possibilidade de chuva em [Florianópolis](LOC)
+    - Na cidade de [Caxias do Sul](LOC) está chovendo?
+    - Verifica a previsão do tempo em [Pelotas](LOC), por favor
+    - Eu gostaria de saber se está chovendo em [Maringá](LOC) neste momento
+    - Na cidade de [Uberaba](LOC) está fazendo quantos graus?
+    - Vê a temperatura em [Brasília](LOC)
+    - Em [Goiânia](LOC) dizem que está chovendo
+    - Previsão do tempo para a cidade de [Paraíso do Tocantins](LOC)
+    - Previsão do tempo para [Aripuanã](LOC)
+    - Quantos graus em [Cacoal](LOC)?
+    - Chuva em [Boa Vista](LOC)
+    - Previsão de Sol para [Rorainópolis](LOC)
+    - Em [Oriximiná](LOC) está fazendo quantos graus?
+    - [Tucumã](LOC) está chovendo
+    - Calor em [Belém](LOC)
+    - Previsão do tempo em [Castanhal](LOC)
+    - Temperatura em [Teresina](LOC)
+    - Temperatura em [Maranhão](LOC)
+    - Temperatura em [Piauí](LOC)
+    - Previsão do tempo em [Petrolina](LOC)
+    - Previsão do tempo em [Porto Seguro](LOC)
+    - Previsão do tempo em [Recife](LOC)
+    - Previsão do tempo em [Iguatu](LOC)
+    - Previsão do tempo em [Jucás](LOC)
+    - Previsão do tempo em [Tauá](LOC)
+    - Previsão do tempo em [Ilhabela](LOC)
+    - Previsão do tempo em [Caraguatatuba](LOC)
+    - Previsão do tempo em [São José dos Campos](LOC)
+    - Previsão do tempo em [Campos do Jordão](LOC)
+    - Está chovendo em [Campinas](LOC)?
+    - Está chovendo em [Sorocaba](LOC)?
+    - Está chovendo em [Araraquara](LOC)?
+    - Está chovendo em [Bauru](LOC)?
+    - Está chovendo em [Rio Claro](LOC)?
+    - Está chovendo em [Washington](LOC)?
+    - Quantos graus está fazendo em [San Diego](LOC)?
+    - Quantos graus está fazendo em [Ontário](LOC)?
+    - Quantos graus está fazendo em [Calgary](LOC)?
+    - Quantos graus está fazendo em [Seattle](LOC)?
+    - Quantos graus está fazendo em [Paris](LOC)?
+    - Quantos graus está fazendo em [Roma](LOC)?
+    - Chovendo em [Barcelona](LOC)?
+    - Verifica a temperatura atual em [Valência](LOC), por favor?
+    - Verifica a temperatura atual em [Madrid](LOC), por favor?
+    - Verifica a temperatura atual em [Granada](LOC), por favor?
+    - Verifica a temperatura atual em [Lisboa](LOC), por favor?
+    - Está sol em [Bruxelas](LOC)?
+    - Nesse momento está calor em [Milão](LOC)?
+    - Está fazendo frio em [Praga](LOC)?
+    - Está fazendo frio em [Berlim](LOC)
+    - Temperatura em [Hamburgo](LOC)
+    - Previsão em [Budapeste](LOC)
+    - Tempo em [Moscou](LOC)
+    - Sensação térmica nesse momento em [Tampere](LOC)
+    - Verificar previsão para [Taipé](LOC)
+    - Em [Xangai](LOC) está frio ou calor?
+    - Nesse momento está calor em [Pequim](LOC)?
+    - Está sol ou chuva em [Seul](LOC)?
+    - Previsão do tempo em [Busan](LOC)
+    - Está fazendo frio em [Tóquio](LOC)
+    - Está chovendo em [Nagoia](LOC)
+    - Está fazendo frio em [Sendai](LOC)
+    - Está sol na cidade de [Niigata](LOC)
+    - Em [Osaka](LOC) está fazendo quantos graus?
+    - Nesse momento está calor em [Yokohama](LOC)?
+    - Está fazendo frio em [Hiroshima](LOC)
+    - Na cidade de [Fukuoka](LOC) está como?
+    - Verifica se está frio em [Nagasaki](LOC)
+    - Na cidade de [Chongqing](LOC) está sol
+    - Nesse momento está calor em [Xiam](LOC)?
+    - Olha a previsão do tempo em [Changsha](LOC)
+    - Nesse momento está calor em [Nanning](LOC)?
+    - Calor em [Haikou](LOC)
+    - Vai nevar?
 - intent: out_of_scope
   examples: |
     - Eu gostaria de uma bicicleta
@@ -124,6 +275,32 @@ nlu:
     - o que você quer
     - Eu gostaria de uma bike
     - quando que o mundo vai acabar?
+    - Voodoo é pra jacu
+    - Quando que a IA irá dominar o mundo?
+    - Qual o sentido da vida?
+    - Tem alguma obra que você gosta?
+    - Porque tem lua crescente se chama assim se ela nunca cresce?
+    - Que tédio
+    - Tô cansado
+    - Só procastinando
+    - Você está me ouvindo?
+    - Onde é que eu tô?
+    - Mó fome
+    - Tô com fome
+    - Sede
+    - Pizza
+    - zzzzzzzzzzzzzzzzzzzzzzzzzz
+    - ashpoashshapsoaspaosa
+    - Me acha bonito?
+    - Me acha bonita?
+    - Eu sou bonito?
+    - Eu sou bonita?
+    - Ser ou não ser?
+    - Beber uma coquinha
+    - Queria um avião
+    - Só observando
+    - Só de passagem
+    - Aliens existem?
 - intent: are_you_a_bot
   examples: |
     - Cê é um robô?
@@ -135,6 +312,15 @@ nlu:
     - cê é uma máquina?
     - Você é um robô?
     - você é um robo
+    - Tu é um bot?
+    - com quem eu falo?
+    - você é humano?
+    - Estou falando com um robô?
+    - Você é uma ia?
+    - IA
+    - Você é artificial?
+    - Estou falando com uma pessoa real?
+    - Você eh artifical?
 - intent: how_are_you
   examples: |
     - tudo bem?
@@ -143,6 +329,10 @@ nlu:
     - como você está?
     - tranquilo?
     - de boa?
+    - Como vai?
+    - tudo bom?
+    - como vc ta?
+    - como vc tá?
 - intent: what_can_you_do
   examples: |
     - o que você sabe fazer?
@@ -152,3 +342,7 @@ nlu:
     - como você pode me ajudar?
     - O que você sabe fazer?
     - o que voce pode fazer
+    - Qual a sua função?
+    - O que você pode fazer?
+    - Qual o seu objetivo?
+    - O que você pode fazer pra me ajudar?

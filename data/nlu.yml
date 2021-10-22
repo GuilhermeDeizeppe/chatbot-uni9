@@ -37,6 +37,7 @@ nlu:
     - Tenha um bom dia
     - Boa tarde
     - Tenha uma boa noite
+    - Salve
 - intent: goodbye
   examples: |
     - tchau
@@ -66,6 +67,7 @@ nlu:
     - É só isso por agora, até
     - É só isso,
     - Até um outro dia
+    - Não, obrigado
 - intent: inform_weather
   examples: |
     - previsão do tempo em [Osasco](LOC)
@@ -254,6 +256,7 @@ nlu:
     - Nesse momento está calor em [Nanning](LOC)?
     - Calor em [Haikou](LOC)
     - Vai nevar?
+    - Santo Anastácio
 - intent: out_of_scope
   examples: |
     - Eu gostaria de uma bicicleta
@@ -346,3 +349,10 @@ nlu:
     - O que você pode fazer?
     - Qual o seu objetivo?
     - O que você pode fazer pra me ajudar?
+- intent: inform_exchange
+  examples: |
+    - Cotação do [dólar](currency1)
+    - Quanto custa [um](quantity) [dollar](currency1)
+    - [dólar](currency1) hoje
+    - Quantos [reais](currency1) em [dólares](currency2)
+    - Quanto custa [doze](quantity) [reais](currency1) em [euro](currency2)

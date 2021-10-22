@@ -29,6 +29,7 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
+  - action: utter_what_can_i_do
   - intent: inform_weather
   - action: simple_weather_form
   - active_loop: simple_weather_form
@@ -52,6 +53,7 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
+  - action: utter_what_can_i_do
   - intent: inform_weather
     entities:
     - LOC: Manaus
@@ -95,6 +97,7 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
+  - action: utter_what_can_i_do
   - intent: inform_weather
     entities:
     - LOC: Petrópolis
@@ -130,6 +133,7 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
+  - action: utter_what_can_i_do
   - intent: inform_weather
     entities:
     - LOC: Ubatuba
@@ -155,6 +159,7 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
+  - action: utter_what_can_i_do
   - intent: what_can_you_do
   - action: utter_what_can_i_do
   - action: utter_can_i_help
@@ -189,6 +194,7 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
+  - action: utter_what_can_i_do
   - intent: are_you_a_bot
   - action: utter_i_am_a_bot
   - action: utter_can_i_help
@@ -231,6 +237,7 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
+  - action: utter_what_can_i_do
   - intent: what_can_you_do
   - action: utter_what_can_i_do
   - action: utter_can_i_help
@@ -248,3 +255,30 @@ stories:
   - active_loop: null
   - action: action_get_weather
   - action: utter_anything_else
+
+- story: interactive_story_12
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_what_can_i_do
+  - intent: what_can_you_do
+  - action: utter_what_can_i_do
+  - action: utter_can_i_help
+  - intent: inform_weather
+  - action: simple_weather_form
+  - active_loop: simple_weather_form
+  - slot_was_set:
+    - requested_slot: LOC
+  - slot_was_set:
+    - LOC: Santo Anastácio
+  - slot_was_set:
+    - LOC: Santo Anastácio
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_get_weather
+  - slot_was_set:
+    - LOC: Santo Anastácio
+  - action: utter_anything_else
+  - intent: goodbye
+  - action: utter_goodbye

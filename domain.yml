@@ -1,24 +1,37 @@
-version: '2.0'
+version: "2.0"
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- greet
-- inform_weather
+- goodbye
 - what_can_you_do
+- inform_weather
+- inform_exchange
+- greet
 - are_you_a_bot
 - out_of_scope
-- goodbye
 - inform_city
 - how_are_you
 entities:
 - LOC
+- currency1
+- currency2
+- quantity
 - out_of_scope_request
 slots:
   LOC:
     type: text
     influence_conversation: true
   date:
+    type: any
+    influence_conversation: false
+  currency1:
+    type: text
+    influence_conversation: true
+  currency2:
+    type: text
+    influence_conversation: true
+  quantity:
     type: any
     influence_conversation: false
 responses:
@@ -52,10 +65,31 @@ responses:
   utter_i_am_fine:
   - text: Estou bem, obrigado! Como posso ajudar?
   utter_what_can_i_do:
-  - text: Sou capaz de verificar a previsão do tempo atual em qualquer lugar do mundo! Para isso, basta dizer "Previsão do tempo em..." e em seguida colocar o nome da cidade.
+    - text: |
+        Sou capaz de verificar a previsão do tempo atual em qualquer lugar do mundo
+        Para isso, basta dizer "Previsão do tempo em..." e em seguida colocar o nome da cidade
+
+        Também posso verificar a cotação atual das moedas BRL, USD, EUR e GBP
+        Para isso, basta digitar "Quero saber a cotação".
   utter_can_i_help:
   - text: Como posso te ajudar?
   - text: Em que posso ajudar?
+  utter_ask_currency1:
+    - text: |
+        Selecione a moeda de origem:
+
+        Digite "BRL" para Real Brasileiro
+        Digite "USD" para Dólar Americano
+        Digite "EUR" para Euro
+        Digite "GBP" para Libra Esterlina
+  utter_ask_currency2:
+    - text: |
+       Agora selecione a moeda de destino:
+
+       Digite "BRL" para Real Brasileiro
+       Digite "USD" para Dólar Americano
+       Digite "EUR" para Euro
+       Digite "GBP" para Libra Esterlina
 actions:
 - action_get_weather
 - utter_anything_else
@@ -68,9 +102,21 @@ actions:
 - utter_i_am_fine
 - utter_wait
 - utter_what_can_i_do
+- utter_ask_currency1
+- utter_ask_currency2
+- validate_simple_exchange_form
 forms:
   simple_weather_form:
     required_slots:
       LOC:
       - type: from_entity
         entity: LOC
+
+  simple_exchange_form:
+    required_slots:
+      currency1:
+        - type: from_entity
+          entity: currency1
+      currency2:
+        - type: from_entity
+          entity: currency2

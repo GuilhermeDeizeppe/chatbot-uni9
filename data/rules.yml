@@ -51,3 +51,20 @@ rules:
   steps:
     - intent: greet
     - action: utter_greet
+    - action: utter_what_can_i_do
+
+- rule: Activate Currency Form
+  steps:
+    - intent: inform_exchange
+    - action: simple_exchange_form
+    - active_loop: simple_exchange_form
+
+- rule: Submit Currency Form
+  condition:
+    - active_loop: simple_exchange_form
+  steps:
+    - action: simple_exchange_form
+    - active_loop: null
+    - slot_was_set:
+        - requested_slot: null
+    - action: utter_wait

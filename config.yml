@@ -1,7 +1,6 @@
 language: pt_core_news_md
 
 pipeline:
-# - name: WhitespaceTokenizer
  - name: SpacyNLP
    model: "pt_core_news_md"
    case_sensitive: False

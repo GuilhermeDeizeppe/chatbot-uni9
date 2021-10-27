@@ -26,7 +26,7 @@ class ActionGetWeather(Action):
         complete_url = url + '?q=' + city + '&APPID=' + app_id + '&units=' + units + '&lang=' + lang + ''
 
         # Example of a complete url
-        # complete_url = 'http://api.openweathermap.org/data/2.5/weather?q=osasco&APPID=xxxxx&units=metric&lang=pt_br'
+        # http://api.openweathermap.org/data/2.5/weather?q=osasco&APPID=xxxxx&units=metric&lang=pt_br
 
         # gets the API result in a JSON format and puts into the "data" variable
         data = requests.get(complete_url).json()
@@ -44,7 +44,7 @@ class ActionGetWeather(Action):
         # the dispatcher.utter_message displays the information to the user as a chatbot message
         dispatcher.utter_message(weather_information)
 
-        # this return the entity LOC with the city provided by the user
+        # return the entity LOC with the city provided by the user
         return [SlotSet('LOC', city)]
 
     class ValidateExchangeForm(FormValidationAction):
@@ -93,3 +93,40 @@ class ActionGetWeather(Action):
             else:
                 dispatcher.utter_message('Moeda não encontrada. Por favor, digite o código da moeda corretamente.')
                 return {"currency2": None}
+
+    class ActionGetExchange(Action):
+
+        def name(self) -> Text:
+            return 'action_get_exchange'
+
+        def run(self, dispatcher: CollectingDispatcher,
+                tracker: Tracker,
+                domain: Dict[Text, Any]):
+
+            url = 'https://economia.awesomeapi.com.br/'  # API's URL
+            currency1 = tracker.get_slot('currency1')
+            currency2 = tracker.get_slot('currency2')
+            currencies = currency1 + '-' + currency2  # Currencies to convert in API
+
+            # the complete URL to get the desired result from the API
+            complete_url = url + currencies
+
+            # Example of a complete url
+            # https://economia.awesomeapi.com.br/USD-BRL
+
+            # gets the API result in a JSON format and puts into the "data" variable
+            data = requests.get(complete_url).json()
+
+            # these variables store the informations that we are going to use
+            name = data[0]['name']
+            high = data[0]['high']
+            low = data[0]['low']
+            buy = data[0]['bid']
+            sell = data[0]['ask']
+
+            # information provided by the API which will be returned to the user
+            exchange_information = \
+                f"Cotação entre {name}:\n\nCompra: {buy}\nVenda: {sell}\nBaixa do dia: {low}\nAlta do dia: {high}"
+
+            # the dispatcher.utter_message displays the information to the user as a chatbot message
+            dispatcher.utter_message(exchange_information)

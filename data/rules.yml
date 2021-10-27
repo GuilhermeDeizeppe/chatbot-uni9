@@ -67,4 +67,4 @@ rules:
     - active_loop: null
     - slot_was_set:
         - requested_slot: null
-    - action: utter_wait
+    - action: action_get_exchange

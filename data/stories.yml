@@ -282,3 +282,94 @@ stories:
   - action: utter_anything_else
   - intent: goodbye
   - action: utter_goodbye
+
+- story: interactive_story_13
+  steps:
+  - intent: inform_exchange
+  - action: simple_exchange_form
+  - active_loop: simple_exchange_form
+  - slot_was_set:
+    - requested_slot: currency1
+  - slot_was_set:
+    - currency1: USD
+  - slot_was_set:
+    - currency1: USD
+  - slot_was_set:
+    - requested_slot: currency2
+  - slot_was_set:
+    - currency2: BRL
+  - slot_was_set:
+    - currency2: BRL
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_get_exchange
+
+- story: interactive_story_14
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_what_can_i_do
+  - intent: inform_exchange
+  - action: simple_exchange_form
+  - active_loop: simple_exchange_form
+  - slot_was_set:
+    - requested_slot: currency1
+  - slot_was_set:
+    - currency1: USD
+  - slot_was_set:
+    - currency1: USD
+  - slot_was_set:
+    - requested_slot: currency2
+  - slot_was_set:
+    - currency2: BRL
+  - slot_was_set:
+    - currency2: BRL
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_get_exchange
+
+- story: interactive_story_15
+  steps:
+  - intent: inform_exchange
+  - action: simple_exchange_form
+  - active_loop: simple_exchange_form
+  - slot_was_set:
+    - requested_slot: currency1
+  - slot_was_set:
+    - currency1: EUR
+  - slot_was_set:
+    - currency1: EUR
+  - slot_was_set:
+    - requested_slot: currency2
+  - slot_was_set:
+    - currency2: BRL
+  - slot_was_set:
+    - currency2: BRL
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_get_exchange
+
+- story: interactive_story_16
+  steps:
+  - intent: inform_exchange
+  - action: simple_exchange_form
+  - active_loop: simple_exchange_form
+  - slot_was_set:
+    - requested_slot: currency1
+  - slot_was_set:
+    - currency1: GBP
+  - slot_was_set:
+    - currency1: GBP
+  - slot_was_set:
+    - requested_slot: currency2
+  - slot_was_set:
+    - currency2: BRL
+  - slot_was_set:
+    - currency2: BRL
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_get_exchange

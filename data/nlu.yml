@@ -38,6 +38,7 @@ nlu:
     - Boa tarde
     - Tenha uma boa noite
     - Salve
+    - Olá!
 - intent: goodbye
   examples: |
     - tchau
@@ -125,11 +126,11 @@ nlu:
     - Itatiba
     - Previsão do tempo em Salesópolis
     - Quanto ta lá em [Ribeirão Preto](LOC)?
-    - Vai tá quantos graus em[São Bernardo do Campo](LOC)?
-    - Vai fazer muito frio em[Biritiba Mirim](LOC)?
+    - Vai tá quantos graus em [São Bernardo do Campo](LOC)?
+    - Vai fazer muito frio em [Biritiba Mirim](LOC)?
     - Vai tá quente hoje em [São Caetano do Sul](LOC)?
     - Poderia me falar a temperatura lá em [Ribeirão Preto](LOC)?
-    - Vai fazer muito calor em[Franco da Rocha](LOC)?
+    - Vai fazer muito calor em [Franco da Rocha](LOC)?
     - Qual a temperatura de hoje em [Rio Grande do Norte](LOC)?
     - Vai chover muito em [Minas Gerais](LOC)?
     - Está nevando na [Bahia](LOC)?
@@ -144,7 +145,7 @@ nlu:
     - O céu vai estar limpo
     - o céu está limpo em [Bragança Paulista](LOC)?
     - Como vai estar o clima pra [Belo Horizonte](LOC)?
-    - Alguma previsão de nevasca em[Espírito Santo](LOC)?
+    - Alguma previsão de nevasca em [Espírito Santo](LOC)?
     - Neve
     - nevar
     - Nevasca
@@ -351,8 +352,23 @@ nlu:
     - O que você pode fazer pra me ajudar?
 - intent: inform_exchange
   examples: |
-    - Cotação do [dólar](currency1)
-    - Quanto custa [um](quantity) [dollar](currency1)
-    - [dólar](currency1) hoje
-    - Quantos [reais](currency1) em [dólares](currency2)
-    - Quanto custa [doze](quantity) [reais](currency1) em [euro](currency2)
+    - Cotação
+    - Cotação das moedas
+    - Câmbio
+    - Eu gostaria de saber a cotação
+    - Por favor, me informe a cotação
+    - Pega pra mim o câmbio
+    - Quero saber a cotação
+    - cotação
+    - moedas
+- intent: inform_currency
+  examples: |
+    - [BRL](currency1)
+    - [BRL](currency2)
+    - [USD](currency1)
+    - [USD](currency2)
+    - [GBP](currency1)
+    - [GBP](currency2)
+    - [EUR](currency1)
+    - [EUR](currency2)
+    - [USD](currency1)

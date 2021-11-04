@@ -121,7 +121,7 @@ nlu:
     - Sim, eu também gostaria de saber a previsão para [Las Vegas](LOC)
     - Em [Petrópolis](LOC) está sol?
     - Calor em [Essex](LOC)?
-    - Previsão do tempo para Ubatuba
+    - Previsão do tempo para [Ubatuba](LOC)
     - Preciso da previsão do tempo
     - Itatiba
     - Previsão do tempo em Salesópolis
@@ -258,6 +258,7 @@ nlu:
     - Calor em [Haikou](LOC)
     - Vai nevar?
     - Santo Anastácio
+    - Agora preciso saber a previsão do tempo para [Halifax](LOC)
 - intent: out_of_scope
   examples: |
     - Eu gostaria de uma bicicleta
@@ -361,14 +362,10 @@ nlu:
     - Quero saber a cotação
     - cotação
     - moedas
+    - cotação das moedas
 - intent: inform_currency
   examples: |
-    - [BRL](currency1)
-    - [BRL](currency2)
-    - [USD](currency1)
-    - [USD](currency2)
-    - [GBP](currency1)
-    - [GBP](currency2)
-    - [EUR](currency1)
-    - [EUR](currency2)
-    - [USD](currency1)
+    - BRL
+    - USD
+    - GBP
+    - EUR

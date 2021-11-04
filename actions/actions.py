@@ -45,7 +45,7 @@ class ActionGetWeather(Action):
         dispatcher.utter_message(weather_information)
 
         # return the entity LOC with the city provided by the user
-        return [SlotSet('LOC', city)]
+        return [SlotSet('LOC', None)]
 
     class ValidateExchangeForm(FormValidationAction):
 
@@ -59,40 +59,28 @@ class ActionGetWeather(Action):
             return ['USD', 'BRL', 'EUR', 'GBP']
 
         # validation of the slot currency1
-        def validate_currency1(
+        def validate_currency(
                 self,
                 slot_value: Any,
                 dispatcher: CollectingDispatcher,
                 tracker: Tracker,
                 domain: DomainDict) -> Dict[Text, Any]:
 
-            # checks if the currency1 value is in currency_list()
-            # if the result is true, the currency1 slot is set with the value provided by the user
-            # if the result is false, the currency1 slot is set to none, which will make the bot ask the user again for
+            # checks if the currency value is in currency_list()
+            # if the result is true, the currency slots are set with the value provided by the user
+            # if the result is false, the currency slot is set to none, which will make the bot ask the user again for
             # the correct value
             if slot_value.upper() in self.currency_list():
-                return {"currency1": slot_value}
+                if tracker.get_slot('currency1') is None:
+                    dispatcher.utter_message(
+                        f'\n\nMoeda de origem definida: {slot_value}\n\nAgora selecione a moeda de destino:')
+                    return {"currency1": slot_value, "currency": None}
+                elif tracker.get_slot('currency2') is None:
+                    dispatcher.utter_message(f'\n\nMoeda de destino definida: {slot_value}')
+                    return {"currency2": slot_value}
             else:
-                dispatcher.utter_message('Moeda não encontrada. Por favor, digite o código da moeda corretamente.')
-                return {"currency1": None}
-
-        # validation of the slot currency2
-        def validate_currency2(
-                self,
-                slot_value: Any,
-                dispatcher: CollectingDispatcher,
-                tracker: Tracker,
-                domain: DomainDict) -> Dict[Text, Any]:
-
-            # checks if the currency2 value is in currency_list()
-            # if the result is true, the currency2 slot is set with the value provided by the user
-            # if the result is false, the currency2 slot is set to none, which will make the bot ask the user again for
-            # the correct value
-            if slot_value.upper() in self.currency_list():
-                return {"currency2": slot_value}
-            else:
-                dispatcher.utter_message('Moeda não encontrada. Por favor, digite o código da moeda corretamente.')
-                return {"currency2": None}
+                dispatcher.utter_message('\n\nMoeda não encontrada. Por favor, digite o código da moeda corretamente.')
+                return {"currency": None}
 
     class ActionGetExchange(Action):
 
@@ -130,3 +118,5 @@ class ActionGetWeather(Action):
 
             # the dispatcher.utter_message displays the information to the user as a chatbot message
             dispatcher.utter_message(exchange_information)
+
+            return [SlotSet('currency1', None), SlotSet('currency2', None), SlotSet('currency', None)]

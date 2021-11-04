@@ -2,6 +2,12 @@ version: "2.0"
 
 rules:
 
+- rule: Greeting
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - action: utter_what_can_i_do
+
 - rule: Say goodbye anytime the user says goodbye
   steps:
   - intent: goodbye
@@ -47,12 +53,6 @@ rules:
     - action: action_get_weather
     - action: utter_anything_else
 
-- rule: Greeting
-  steps:
-    - intent: greet
-    - action: utter_greet
-    - action: utter_what_can_i_do
-
 - rule: Activate Currency Form
   steps:
     - intent: inform_exchange
@@ -68,3 +68,4 @@ rules:
     - slot_was_set:
         - requested_slot: null
     - action: action_get_exchange
+    - action: utter_anything_else

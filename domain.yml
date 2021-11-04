@@ -3,37 +3,34 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
+- inform_weather
 - inform_currency
 - inform_exchange
 - greet
 - goodbye
 - what_can_you_do
-- inform_weather
 - are_you_a_bot
 - out_of_scope
 - inform_city
 - how_are_you
 entities:
 - LOC
+- currency
 - currency1
 - currency2
-- out_of_scope_request
 slots:
   LOC:
     type: text
     influence_conversation: true
-  date:
-    type: any
-    influence_conversation: false
+  currency:
+    type: text
+    influence_conversation: true
   currency1:
     type: text
     influence_conversation: true
   currency2:
     type: text
     influence_conversation: true
-  quantity:
-    type: any
-    influence_conversation: false
 responses:
   utter_greet:
   - text: Olá! Como posso ajudar?
@@ -68,24 +65,14 @@ responses:
   - text: |
       Sou capaz de verificar a previsão do tempo atual em qualquer lugar do mundo
       Para isso, basta dizer "Previsão do tempo em..." e em seguida colocar o nome da cidade
-
       Também posso verificar a cotação atual das moedas BRL, USD, EUR e GBP
       Para isso, basta digitar "Quero saber a cotação".
   utter_can_i_help:
   - text: Como posso te ajudar?
   - text: Em que posso ajudar?
-  utter_ask_currency1:
+  utter_ask_currency:
   - text: |
-      Selecione a moeda de origem:
-
-      Digite "BRL" para Real Brasileiro
-      Digite "USD" para Dólar Americano
-      Digite "EUR" para Euro
-      Digite "GBP" para Libra Esterlina
-  utter_ask_currency2:
-  - text: |
-      Agora selecione a moeda de destino:
-
+      Selecione a moeda:
       Digite "BRL" para Real Brasileiro
       Digite "USD" para Dólar Americano
       Digite "EUR" para Euro
@@ -95,8 +82,7 @@ actions:
 - action_get_weather
 - utter_anything_else
 - utter_ask_LOC
-- utter_ask_currency1
-- utter_ask_currency2
+- utter_ask_currency
 - utter_can_i_help
 - utter_fallback
 - utter_goodbye
@@ -114,9 +100,6 @@ forms:
         entity: LOC
   simple_exchange_form:
     required_slots:
-      currency1:
-      - type: from_entity
-        entity: currency1
-      currency2:
-      - type: from_entity
-        entity: currency2
+      currency:
+      - type: from_text
+        entity: currency

@@ -283,74 +283,28 @@ stories:
   - intent: goodbye
   - action: utter_goodbye
 
-- story: interactive_story_13
-  steps:
-  - intent: inform_exchange
-  - action: simple_exchange_form
-  - active_loop: simple_exchange_form
-  - slot_was_set:
-    - requested_slot: currency1
-  - slot_was_set:
-    - currency1: USD
-  - slot_was_set:
-    - currency1: USD
-  - slot_was_set:
-    - requested_slot: currency2
-  - slot_was_set:
-    - currency2: BRL
-  - slot_was_set:
-    - currency2: BRL
-  - slot_was_set:
-    - requested_slot: null
-  - active_loop: null
-  - action: action_get_exchange
-
-- story: interactive_story_14
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - action: utter_what_can_i_do
-  - intent: inform_exchange
-  - action: simple_exchange_form
-  - active_loop: simple_exchange_form
-  - slot_was_set:
-    - requested_slot: currency1
-  - slot_was_set:
-    - currency1: USD
-  - slot_was_set:
-    - currency1: USD
-  - slot_was_set:
-    - requested_slot: currency2
-  - slot_was_set:
-    - currency2: BRL
-  - slot_was_set:
-    - currency2: BRL
-  - slot_was_set:
-    - requested_slot: null
-  - active_loop: null
-  - action: action_get_exchange
-
 - story: interactive_story_15
   steps:
   - intent: inform_exchange
   - action: simple_exchange_form
   - active_loop: simple_exchange_form
   - slot_was_set:
-    - requested_slot: currency1
+    - requested_slot: currency
+  - slot_was_set:
+    - currency: null
   - slot_was_set:
     - currency1: EUR
   - slot_was_set:
-    - currency1: EUR
+    - requested_slot: currency
   - slot_was_set:
-    - requested_slot: currency2
-  - slot_was_set:
-    - currency2: BRL
+    - currency: BRL
   - slot_was_set:
     - currency2: BRL
   - slot_was_set:
     - requested_slot: null
   - active_loop: null
   - action: action_get_exchange
+  - action: utter_anything_else
 
 - story: interactive_story_16
   steps:
@@ -358,18 +312,111 @@ stories:
   - action: simple_exchange_form
   - active_loop: simple_exchange_form
   - slot_was_set:
-    - requested_slot: currency1
+    - requested_slot: currency
+  - slot_was_set:
+    - currency: null
+  - slot_was_set:
+    - currency1: USD
+  - slot_was_set:
+    - requested_slot: currency
+  - slot_was_set:
+    - currency: EUR
+  - slot_was_set:
+    - currency2: EUR
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_get_exchange
+  - action: utter_anything_else
+
+- story: interactive_story_17
+  steps:
+  - intent: inform_exchange
+  - action: simple_exchange_form
+  - active_loop: simple_exchange_form
+  - slot_was_set:
+    - requested_slot: currency
+  - slot_was_set:
+    - currency: null
   - slot_was_set:
     - currency1: GBP
   - slot_was_set:
+    - requested_slot: currency
+  - slot_was_set:
+    - currency: EUR
+  - slot_was_set:
+    - currency2: EUR
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_get_exchange
+  - action: utter_anything_else
+
+- story: interactive_story_18
+  steps:
+  - intent: inform_exchange
+  - action: simple_exchange_form
+  - active_loop: simple_exchange_form
+  - slot_was_set:
+    - requested_slot: currency
+  - slot_was_set:
+    - currency: null
+  - slot_was_set:
+    - currency1: EUR
+  - slot_was_set:
+    - requested_slot: currency
+  - slot_was_set:
+    - currency: USD
+  - slot_was_set:
+    - currency2: USD
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_get_exchange
+  - action: utter_anything_else
+- story: interactive_story_1
+  steps:
+  - intent: inform_exchange
+  - action: simple_exchange_form
+  - active_loop: simple_exchange_form
+  - slot_was_set:
+    - requested_slot: currency
+  - slot_was_set:
+    - currency: null
+  - slot_was_set:
     - currency1: GBP
   - slot_was_set:
-    - requested_slot: currency2
+    - requested_slot: currency
   - slot_was_set:
-    - currency2: BRL
+    - currency: BRL
   - slot_was_set:
     - currency2: BRL
   - slot_was_set:
     - requested_slot: null
   - active_loop: null
   - action: action_get_exchange
+  - slot_was_set:
+    - currency1: null
+  - slot_was_set:
+    - currency2: null
+  - slot_was_set:
+    - currency: null
+  - action: utter_anything_else
+  - intent: inform_weather
+    entities:
+    - LOC: Halifax
+  - slot_was_set:
+    - LOC: Halifax
+  - action: simple_weather_form
+  - active_loop: simple_weather_form
+  - slot_was_set:
+    - LOC: Halifax
+  - slot_was_set:
+    - LOC: Halifax
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_get_weather
+  - slot_was_set:
+    - LOC: null
+  - action: utter_anything_else
